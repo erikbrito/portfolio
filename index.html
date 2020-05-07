@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app id="inspire">
+
+      <v-app-bar app class="header" color="#2c3e50" >
+        <v-toolbar-title class="title" > My Portfolio </v-toolbar-title>
+        <div class="links" >
+          <div class="text link float-right" >Portfolio</div>
+          <div class="text link float-right" >About</div>
+          <div class="text link float-right" >Contact</div>
+        </div>
+      </v-app-bar>
+  
+      <v-content class="background">
+        
+        <v-layout class="all" align-center justify-center fill-height>
+
+          <section class="bgGreen">
+            
+            <div class="divSection">
+
+              <img class="imgPersonal" src="src/zerik.jpg" alt="">
+
+              <h1 class="name" >José Érik</h1>
+
+              <div class="lineAndStar">
+
+                <div class="lineLeft"></div>
+  
+                <svg class="star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                </svg>
+
+                <div class="lineRight"></div>
+
+              </div>
+
+              
+              <span class="description" >Front-end - Web Designer - Back-end</span>
+
+            </div>
+
+          </section>
+
+          <section class="divSection">
+
+            <h1 class="name colorBlack">Portfolio</h1>
+
+            <div class="lineAndStar colorBlack">
+
+              <div class="lineLeft colorBlack"></div>
+
+              <svg class="star colorBlack" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+              </svg>
+
+              <div class="lineRight colorBlack"></div>
+
+            </div>
+
+            <div class="cards">
+
+              <v-card
+                class="mx-auto card"
+                max-width="344"
+                v-for="card in cards"
+                :key="card"
+              >
+                <v-img
+                  :src="card.image"
+                  height="200px"
+                ></v-img>
+            
+                <v-card-title>
+                  {{ card.title }}
+                </v-card-title>
+            
+                <v-card-subtitle>
+                  {{ card.description }}
+                </v-card-subtitle>
+            
+                <v-card-actions>
+                  <v-btn text :href="card.code">Code</v-btn>
+            
+                  <v-btn
+                    color="purple"
+                    text
+                    :href="card.demo"
+                  >
+                    Demo
+                  </v-btn>
+
+                </v-card-actions>
+            
+              </v-card>
+
+            </div>
+
+            </section>
+
+            <section class="bgGreen">
+            
+              <div class="divSection">
+  
+                <h1 class="name" >About</h1>
+  
+                <div class="lineAndStar">
+  
+                  <div class="lineLeft"></div>
+    
+                  <svg class="star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                  </svg>
+  
+                  <div class="lineRight"></div>
+  
+                </div>
+  
+                
+                <span class="description" >
+                  I am a web developer who likes challenges and learn new things. I work with several languages, banks and frameworks such as Java, Javascript, PHP, PostgreSQL, MySQL, Mongo, Vuejs, React, Angular and some others. I have some experiences with mobile application development and also develop games for various platforms. To learn more about my skills access my curriculum
+                </span>
+
+                <v-btn class="ma-2 buttonCurriculum" tile x-large outlined>
+                  <v-icon left>mdi-cloud-download</v-icon> Curriculum
+                </v-btn>
+  
+              </div>
+  
+            </section>
+            
+        </v-layout>
+  
+      </v-content>
+  
+    </v-app>
+  </div>
+
+  <style scoped>
+    .header {
+      height: 100px!important;
+    }
+    .all {
+      display: contents;
+    }
+    .v-toolbar__content {
+      height: 100px!important;
+    }
+    .v-application .title {
+      color: white;
+      font-family: 'Baloo 2', cursive!important;
+      font-size: 1.7rem!important;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-left: 100px;
+    }
+    .links {
+      display: flex;
+      margin-left: auto;
+      margin-right: 100px;
+      /* margin-right: 1em; */
+    }
+    .link {
+      margin: 0.5em;
+    }
+    .text {
+      color: white;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .text:hover {
+      color: #1abc9c;
+      cursor: pointer;
+    }
+    .bgGreen {
+      background-color: #1abc9c;
+      width: 100%;
+      /* height: 100%; */
+    }
+    .divSection {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 5rem;
+    }
+    .name {
+      font-family: 'Baloo 2', cursive!important;
+      color: white;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 4em;
+    }
+    .lineAndStar {
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+    }
+    .star {
+      width: 3%;
+    }
+    .lineLeft {
+      border: 2px solid;
+      color: white;
+      width: 100%;
+      max-width: 7rem;
+      height: 0.25rem;
+      background-color: white;
+      border-radius: 1rem;
+      margin-right: 1rem;
+    }
+    .lineRight {
+      border: 2px solid;
+      color: white;
+      width: 100%;
+      max-width: 7rem;
+      height: 0.25rem;
+      background-color: white;
+      border-radius: 1rem;
+      margin-left: 1rem;
+    }
+    .description {
+      color: white;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 1rem;
+    }
+    .imgPersonal {
+      border-radius: 50%;
+      min-width: 15%;
+      margin-bottom: 1rem;
+    }
+    .bgSecondary {
+      width: 100%;
+      height: 100%;
+    }
+    .colorBlack {
+      color: #2c3e50;
+    }
+    .cards {
+      margin: 1rem auto;
+    }
+    .v-application .mx-auto {
+      margin: 1rem;
+      margin-right: 1rem!important;
+      margin-left: 1rem!important;
+      float: left;
+    }
+    .buttonCurriculum {
+      color: white!important;
+    }
+    .buttonCurriculum:hover {
+      color: black!important;
+      background-color: white;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <script>
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ({
+        drawer: null,
+        justify: 'center',
+        show: false,
+        cards: [
+          {
+          image: 'https://user-images.githubusercontent.com/5699834/77693059-8079fb00-6f86-11ea-9def-eec0c1782f2f.png',
+          title: 'Calculator',
+          description: 'One calculator with some functions',
+          code: 'https://github.com/erikbrito/simple-calculatorv2',
+          demo: 'https://calculator-v2.now.sh/'
+          },
+          {
+          image: 'https://user-images.githubusercontent.com/5699834/81017389-bdb09300-8e38-11ea-8cd4-ab573292d445.png',
+          title: 'Jokenpo',
+          description: 'Play jokenpo against a bot and try to get as many points as possible',
+          code: 'https://github.com/erikbrito/jokenpo',
+          demo: 'https://myjokenpo.now.sh/'
+          }
+        ]
+      }),
+    })
+  </script>
+
+</body>
+</html>
