@@ -15,9 +15,8 @@
       <v-app-bar app class="header" color="#2c3e50" >
         <v-toolbar-title class="title" > My Portfolio </v-toolbar-title>
         <div class="links" >
-          <div class="text link float-right" >Portfolio</div>
-          <div class="text link float-right" >About</div>
-          <div class="text link float-right" >Contact</div>
+          <div class="text link float-right" @click="$vuetify.goTo('#portfolio')">Portfolio</div>
+          <div class="text link float-right" @click="$vuetify.goTo('#about')">About</div>
         </div>
       </v-app-bar>
   
@@ -52,7 +51,7 @@
 
           </section>
 
-          <section class="divSection">
+          <section id="portfolio" class="divSection">
 
             <h1 class="name colorBlack">Portfolio</h1>
 
@@ -108,7 +107,7 @@
 
             </section>
 
-            <section class="bgGreen">
+            <section id="about" class="bgGreen">
             
               <div class="divSection">
   
